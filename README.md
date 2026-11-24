@@ -12,6 +12,13 @@ Full-string matching with `.` (any one character) and `*` (zero or more of the *
 
 **Complexity:** O(n·m) time and space.
 
+## Visual walkthrough
+
+Read the picture top to bottom — each numbered frame is one moment of the algorithm
+running on this repo's test example.
+
+![Step-by-step visual walkthrough](viz.svg)
+
 ## Run
 
     go test ./...   # verify

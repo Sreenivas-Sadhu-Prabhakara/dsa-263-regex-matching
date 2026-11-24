@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="479" viewBox="0 0 760 479" role="img" aria-label="Step-by-step visual walkthrough">
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="context-stroke"/></marker></defs>
+<rect x="1.0" y="1.0" width="758.0" height="477.0" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+<text x="24.0" y="34.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" fill="#1e293b" text-anchor="start" font-weight="600">Regex Matching — star means zero-or-more of the previous</text>
+<circle cx="35.0" cy="74.0" r="11" fill="#2563eb" stroke="#2563eb" stroke-width="1.4"/>
+<text x="35.0" y="78.5" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">1</text>
+<text x="56.0" y="79.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">Full-string match with '.' (any char) and '*' (zero or more of the PRECEDING</text>
+<text x="56.0" y="98.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">element). "aa" vs "a": no. "aa" vs "a*": yes.</text>
+<text x="72.0" y="133.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#64748b" text-anchor="end">examples</text>
+<rect x="84.0" y="114.0" width="153.0" height="28.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="160.5" y="133.0" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#1e293b" text-anchor="middle">aa vs a → false</text>
+<rect x="247.0" y="114.0" width="153.0" height="28.0" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+<text x="323.5" y="133.0" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#1e293b" text-anchor="middle">aa vs a* → true</text>
+<rect x="410.0" y="114.0" width="153.0" height="28.0" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="486.5" y="133.0" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#1e293b" text-anchor="middle">ab vs .* → true</text>
+<line x1="24.0" y1="158.0" x2="736.0" y2="158.0" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="35.0" cy="178.0" r="11" fill="#2563eb" stroke="#2563eb" stroke-width="1.4"/>
+<text x="35.0" y="182.5" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">2</text>
+<text x="56.0" y="183.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">dp[i][j] = s's first i match p's first j. A '*' at j looks BACK: use zero copies</text>
+<text x="56.0" y="202.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">(dp[i][j−2]) OR, if s's char matches the starred element, one more copy</text>
+<text x="56.0" y="221.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">(dp[i−1][j]).</text>
+<text x="24.0" y="245.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#64748b" text-anchor="start" font-weight="600">rules</text>
+<text x="47.0" y="261.0" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#64748b" text-anchor="middle">pattern char</text>
+<text x="93.0" y="261.0" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#64748b" text-anchor="middle">recurrence</text>
+<rect x="24.0" y="267.0" width="44.0" height="30.0" rx="4" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="46.0" y="287.0" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#1e293b" text-anchor="middle">p[j] letter/.</text>
+<rect x="70.0" y="267.0" width="44.0" height="30.0" rx="4" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="92.0" y="287.0" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#1e293b" text-anchor="middle">dp[i-1][j-1] if match</text>
+<rect x="24.0" y="299.0" width="44.0" height="30.0" rx="4" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="46.0" y="319.0" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#1e293b" text-anchor="middle">p[j] = *</text>
+<rect x="70.0" y="299.0" width="44.0" height="30.0" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+<text x="92.0" y="319.0" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#1e293b" text-anchor="middle">dp[i][j-2] OR (match → dp[i-1][j])</text>
+<line x1="24.0" y1="345.0" x2="736.0" y2="345.0" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="35.0" cy="365.0" r="11" fill="#2563eb" stroke="#2563eb" stroke-width="1.4"/>
+<text x="35.0" y="369.5" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">3</text>
+<text x="56.0" y="370.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">The empty-string column seeds it: patterns like a*b* match "" through the</text>
+<text x="56.0" y="389.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">zero-copies branch. Every regex-lite question is these two rules plus careful bases.</text>
+<text x="72.0" y="424.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#64748b" text-anchor="end">lesson</text>
+<rect x="84.0" y="405.0" width="252.0" height="28.0" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+<text x="210.0" y="424.0" font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#1e293b" text-anchor="middle">core → star looks back two</text>
+<text x="380.0" y="461.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">github.com/Sreenivas-Sadhu-Prabhakara · dsa series</text>
+</svg>
